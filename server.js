@@ -63,6 +63,8 @@ app.get("/sendchar", function(req, res){
 
 
 // running the server
-app.listen(3000, function(){
-  console.log("Server listening on port 3000!");
+var port = 80;
+
+app.listen(port, function(){
+  console.log("Server listening on port " + port + "!");
 })
