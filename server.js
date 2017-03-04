@@ -41,7 +41,7 @@ app.get("/getuniquetoken", function(req, res){
 })
 
 app.get("/allowedwordlength", function(req, res){
-  res.send(allowedWordLength);
+  res.send(allowedWordLength + "");
 })
 
 app.get("/sendchar", function(req, res){
