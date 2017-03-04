@@ -49,15 +49,10 @@ app.get("/sendchar", function(req, res){
   var token = req.query.token;
 
   if(fs.existsSync(token)){
-    fs.writeFileSync(token + "/logs.txt", payload, function(err){
-      if(err){
-        res.send("error");
-      } else {
-        res.send("success");
-      }
-    });
+    fs.writeFileSync(token + "/logs.txt", payload);
+    res.send("success");
   } else {
-      res.send("incorrect token");
+    res.send("incorrect token");
   }
 })
 
